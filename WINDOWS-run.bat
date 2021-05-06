@@ -1,1 +1,1 @@
-java -jar build/Game.jar
+java -jar build/OneOrTwo.jar

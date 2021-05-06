@@ -25,3 +25,15 @@ The player to select the looser piece loses the game.
 A player may not select already selected pieces.
 A player alternates turns with the opponent player.
 A player may not skip his turn.
+
+Compile:
+Executable batch files are to compile and run the game on Windows. For other OS, you can export src folder and build it by writing:
+	
+	javac MainGame.java
+
+to run:
+	
+	java MainGame
+
+The project was built on jdk 1.8.0_281
+

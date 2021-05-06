@@ -73,7 +73,6 @@ class ButtonPanel extends JPanel {
 		y_coord = (int)(this.getBounds().getHeight()/3);	
 
 		//draw the full ones of draw nothing depending on whether the buttons been selected
-	
 		if(!dissapear_button)
 			circle = new Ellipse2D.Double(x_coord, y_coord, circle_size,circle_size);
 		else
@@ -97,9 +96,6 @@ class ButtonPanel extends JPanel {
 		button.setContentAreaFilled(false);
 		button.setBorderPainted(false);
 
-		
 		this.add(button);
-		
-		//g.drawRect(10, 10, 100, 100);
 	}
 }

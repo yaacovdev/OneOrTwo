@@ -3,12 +3,11 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
-
 public class GameViewerFrame extends JFrame {
 	// the whole point is to identify if the mouse is in the ball field
-
 	private final static String version = "alpha - 1.0.3";
 	private final static String title = "One or Two!";
+
 	private final int FRAME_LENGTH = 1200, FRAME_HEIGHT = 900;
 	private int number_of_buttons = 20;
 	private static ActionListener listener, turn_listener;
@@ -29,7 +28,6 @@ public class GameViewerFrame extends JFrame {
 	/**
 	*Constructor which sets up the whole game panels which include the title of the screen, then buttons to indicate the turn of the player.
 	*The bottom circles are circles with connected hidden buttons that become disabled when the button is selected by the player.
-	*
 	*/
 	public GameViewerFrame() {
 
@@ -58,7 +56,6 @@ public class GameViewerFrame extends JFrame {
 		buttons = new ArrayList<>();
 
 		//the two classes work together to switch the button turns
-		
 		class ButtonListener implements ActionListener
 		{
 			public void actionPerformed(ActionEvent event)
@@ -118,7 +115,6 @@ public class GameViewerFrame extends JFrame {
 	private void gameOver()
 	{
 		game_title.setText("Game Over " + getWinner());
-		//game_title.setHorizontalAlignment(SwingConstants.CENTER);
 		clearAllButtons();
 		clearSelectButtons();
 	}
@@ -148,10 +144,8 @@ public class GameViewerFrame extends JFrame {
 			buttons.get(i).rep();
 		}
 		buttons.clear();
-
-		
 	}
-
+	
 	//turn over
 	private void turnOver(boolean button_pressed)
 	{
@@ -179,7 +173,6 @@ public class GameViewerFrame extends JFrame {
 		if(circles_left_p1 > 0) circles_left_p1--;
 		if(circles_left_p2 > 0) circles_left_p2--;
 
-		
 		if(circles_left_p1 != 0 || circles_left_p2 != 0)
 		{
 			return;
@@ -199,7 +192,6 @@ public class GameViewerFrame extends JFrame {
 				changeSelectColor();
 				winning_player = 1;
 			}
-
 	}
 
 	private void changeSelectColor()
@@ -214,7 +206,6 @@ public class GameViewerFrame extends JFrame {
 			player1panel.setBackground(Color.RED);
 			player2panel.setBackground(background);
 		}
-		
 	}
 
 	//top button design
@@ -222,7 +213,6 @@ public class GameViewerFrame extends JFrame {
 	{
 		n_panel.setLayout(new GridBagLayout());
 		game_title = new JLabel(title, SwingConstants.CENTER);
-		//game_title.setOpaque(true);
 		
 		game_title.setForeground(Color.WHITE);
 		
@@ -285,8 +275,6 @@ public class GameViewerFrame extends JFrame {
 
 	}
 
-
-
 	//methods regarding center pannel
 	private void allocButtonPanels()
 	{
@@ -323,7 +311,6 @@ public class GameViewerFrame extends JFrame {
 		}
 	}
 
-
 	private void selectButton()
 	{
 		
@@ -335,15 +322,8 @@ public class GameViewerFrame extends JFrame {
 				if(buttons.get(i).isLoosing())
 				{
 					gameOver();
-			
 				}
-				
 			}	
 		}
 	}
 }
-
-
-
-
-
